@@ -9,7 +9,7 @@ This module is composed by a class that defines a Rectangle
 class Rectangle:
     """ A class that defines a rectangle """
 
-    def __init__(self, width=0, heigh=0):
+    def __init__(self, width=0, height=0):
         """ Method that initializes the instance
 
         Args:
