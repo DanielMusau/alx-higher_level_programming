@@ -4,6 +4,7 @@ This module is composed by a class that defines a Square.
 
 """
 
+
 class Square:
     """This is a class that defines a Square.
     """
