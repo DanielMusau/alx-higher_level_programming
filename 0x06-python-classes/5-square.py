@@ -9,7 +9,7 @@ class Square:
     """
     def __init__(self, size=0):
         """Initializes the class and all it's instances.
-            
+
             Args:
                 size (int): Size of the Square.
         """
@@ -45,5 +45,5 @@ class Square:
         else:
             for i in range(self.__size):
                 for j in range(self.__size):
-                    print("#", end='' )
+                    print("#", end='')
                 print()
