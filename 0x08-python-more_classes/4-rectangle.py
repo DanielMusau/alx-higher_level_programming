@@ -64,10 +64,11 @@ class Rectangle:
 
     def __str__(self):
         """Method that returns the rectangle # """
-        rectangle = "" 
+        rectangle = ""
+
         if self.width == 0 or self.height == 0:
             return rectangle
-        
+
         for i in range(self.height):
             rectangle += ("#" * self.width) + "\n"
 
@@ -76,5 +77,3 @@ class Rectangle:
     def __repr__(self):
         """Method that returns the string representation of the instance. """
         return "Rectangle({:d}, {:d})".format(self.width, self.height)
-
-
