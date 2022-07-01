@@ -5,11 +5,11 @@ This module contains a class that defines a Rectangle.
 
 
 class Rectangle:
+    """A class that defines a Rectangle
+    """
 
     number_of_instances = 0
 
-    """A class that defines a Rectangle
-    """
     def __init__(self, width=0, height=0):
         """Initializes the class and all its instances.
 
@@ -67,7 +67,7 @@ class Rectangle:
 
     def __str__(self):
         """Method that prints the rectangle with the character # """
-        rectangle = "" 
+        rectangle = ""
         if self.width == 0 or self.height == 0:
             return rectangle
         else:
