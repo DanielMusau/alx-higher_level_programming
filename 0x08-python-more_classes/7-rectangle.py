@@ -72,7 +72,7 @@ class Rectangle:
             return rectangle
         for i in range(self.height):
             rectangle += (str(self.print_symbol) * self.width) + "\n"
-            return rectangle[:-1]
+        return rectangle[:-1]
 
     def __repr__(self):
         """Method that returns the string rep of the instance """
