@@ -3,9 +3,10 @@
 This module contains a functions that writes a string to a text file.
 """
 
+
 def write_file(filename="", text=""):
-    """Function that writes a string to a tet file.
-    
+    """Function that writes a string to a text file.
+
     Args:
         filename: file to be written to.
         text: Text to be written in file.
