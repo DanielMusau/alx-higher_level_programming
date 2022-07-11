@@ -14,7 +14,5 @@ def save_to_json_file(my_obj, filename):
         my_obj: Object to written
         filename: file to written to.
     """
-    json_data = json.dumps(my_obj)
-
     with open(filename, 'w', encoding='utf-8') as file_r:
-        file_r.write(json_data)
+        json.dump(my_obj, file_r)
