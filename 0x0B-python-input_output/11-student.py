@@ -24,10 +24,7 @@ class Student:
                 if type(i) != str:
                     n_dict = self.__dict__
                     break
-                try:
-                    n_dict[i] = getattr(self, i)
-                except:
-                    pass
+                n_dict[i] = getattr(self, i)
         else:
             n_dict = self.__dict__
         return (n_dict)
