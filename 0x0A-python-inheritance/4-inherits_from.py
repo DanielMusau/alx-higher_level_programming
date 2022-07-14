@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+Module consists of a function that checks if
+the object is an instance of a class that inherited from the
+specified class.
+"""
+
+
 def inherits_from(obj, a_class):
     """Function that checks if object is an instance of a class
     that inherited from the specified class.
