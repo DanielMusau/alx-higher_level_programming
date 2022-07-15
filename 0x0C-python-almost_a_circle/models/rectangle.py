@@ -40,7 +40,7 @@ class Rectangle(Base):
         elif value < 0:
             raise ValueError("Height should be greater than zero")
         self.__height = value
-    
+
     @property
     def x(self):
         """width getter"""
@@ -54,7 +54,7 @@ class Rectangle(Base):
         elif value < 0:
             raise ValueError("x should be greater than zero")
         self.__x = value
-    
+
     @property
     def y(self):
         """y getter"""
