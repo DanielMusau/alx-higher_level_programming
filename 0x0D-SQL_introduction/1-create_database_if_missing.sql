@@ -1,2 +1,3 @@
--- Script that creates 'hbtn_0c_0' if missing
+-- Creates a new database
+-- Query Script that creates 'hbtn_0c_0' if missing
 CREATE DATABASE IF NOT EXISTS htbn_0c_0;
