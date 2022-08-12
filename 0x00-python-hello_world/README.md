@@ -1,5 +1,5 @@
 # Hello, World
-Project aims to teach about variables, basics commands (print) and handle string with Python.
+Project that aims to teach about variables, basics commands (print) and handle string with Python.
 
 ## Files
 The following are files written in Python:
