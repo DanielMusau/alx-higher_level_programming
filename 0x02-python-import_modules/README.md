@@ -1,5 +1,5 @@
 # Python import & modules
-Project aims to teach how to import functions, how to create modules and how to use command line arguments in Python
+This Project aims to teach how to import functions, how to create modules and how to use command line arguments in Python
 
 ## Files
 The following are files written in Python:
