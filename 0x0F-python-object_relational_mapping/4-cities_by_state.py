@@ -2,6 +2,8 @@
 """
 Lists all cities from a database
 """
+import sys
+import MySQLdb
 
 
 if __name__ == '__main__':
