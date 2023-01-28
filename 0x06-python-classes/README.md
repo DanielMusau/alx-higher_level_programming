@@ -1,5 +1,5 @@
 ## Classes and Objects
-Project aims to teach about object oriented programming (OOP), classes, objects, instances, methods and attributes in Python.
+Project aims to teach about object oriented programming (OOP), classes, objects, instances, methods and attributes in **Python**.
 
 ## Files
 | Filename | Description |
