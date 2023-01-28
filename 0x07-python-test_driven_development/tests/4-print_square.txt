@@ -1,0 +1,58 @@
+The ``print_square`` module
+===========================
+# Run python3 -m doctest -v ./tests/4-print_square.txt
+
+First import the module
+-----------------------
+>>> print_square = __import__('4-print_square').print_square
+
+SUCCESS CASES
+=============
+If the size is of type int
+--------------------------
+>>> print_square(4)
+####
+####
+####
+####
+
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+>>> print_square(0)
+
+>>> print_square(1)
+#
+
+
+FAIL CASES
+==========
+If size is of type float
+------------------------
+>>> print_square(4.4)
+Traceback (most recent call last):
+  ...
+TypeError: size must be an integer
+
+If size is of type char
+-----------------------
+>>> print_square("h")
+Traceback (most recent call last):
+  ...
+TypeError: size must be an integer
+
+If size is less than 0
+----------------------
+>>> print_square(-5)
+Traceback (most recent call last):
+  ...
+ValueError: size must be >= 0
