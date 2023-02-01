@@ -12,3 +12,6 @@ Project aims to teach about object oriented programming (OOP), Data Abstraction,
 | `5-rectangle.py` | Class `Rectangle` that prints a message when an isnatnce is deleted.|
 | `6-rectangle.py` | Class `Rectangle` with a public class attribute that counts the number of instances.|
 | `7-rectangle.py` | Class `Rectangle` with a public slass attribute to print a specific symbol.|
+| `8-rectangle.py` | Class `Rectangle` with a method to compare instance's size |
+| `9-rectangle.py` | Class `Rectangle` with a class method that returns a new instance|
+| `101-nqueens.py` | `Backtracking` algorithm that solves the N-Queen puzzle |
