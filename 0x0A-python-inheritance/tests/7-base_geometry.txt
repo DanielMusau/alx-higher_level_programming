@@ -37,3 +37,39 @@ Trying to access the area method in the class:
 	Traceback (most recent call last):
 	  ...
 	Exception: area() is not implemented
+
+Trying to use only name:
+	>>> bg.integer_validator("age")
+	Traceback (most recent call last):
+	  ...
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Trying to use value as set:
+	>>> bg.integer_validator("age", (4,))
+	Traceback (most recent call last):
+	  ...
+	TypeError: age must be an integer
+
+Trying to use value as a list:
+	>>> bg.integer_validator("age", [3])
+	Traceback (most recent call last):
+	  ...
+	TypeError: age must be an integer
+
+Trying to use value as a boolean:
+	>>> bg.integer_validator("age", True)
+	Traceback (most recent call last):
+	  ...
+	TypeError: age must be an integer
+
+Trying to use value as a dictionary:
+	>>> bg.integer_validator("age", {3,4})
+	Traceback (most recent call last):
+	  ...
+	TypeError: age must be an integer
+
+Trying to assign None to value:
+	>>> bg.integer_validator("age", None)
+	Traceback (most recent call last):
+	  ...
+	TypeError: age must be an integer
