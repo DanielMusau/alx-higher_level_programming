@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""Module contains a MyInt Class that inherits from 
+"""Module contains a MyInt Class that inherits from
 the int class. """
+
+
 class MyInt(int):
     """ Class that inherits from int class."""
-
 
     def __eq__(self, other):
         """ Method that returns != check """
