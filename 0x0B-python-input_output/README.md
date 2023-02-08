@@ -17,3 +17,5 @@ Project aims to teach how to open, read, write and append files from a script in
 | `10-student.py` | Class `Student` that defines a student with a method to retrieve a JSON representation.|
 | `11-student.py` | Class  `Student` that defines a student with a method to load a JSON object.|
 | `12-pascal_triangle.py` | Function that returns a list of lists of integers representing the Pascal's triangle of `n`.|
+| `100-append_after.py` | Function that inserts a line of text to a file, after each line containing a specific string |
+| `101-stats.py` | Function that reads `stdin` line by line and computes metrics |
