@@ -11,8 +11,8 @@ class RectangleTest(unittest.TestCase):
         """ setting up nb objects. """
         Base._Base__nb_objects = 0
 
-    def test_new_rect(self):
-        """ Testing default rectangle id. """
+    def test_rectangle(self):
+        """ Tests the initialization of a rectangle. """
         r = Rectangle(10, 2)
         self.assertEqual(r.width, 10)
         self.assertEqual(r.height, 2)
@@ -20,37 +20,67 @@ class RectangleTest(unittest.TestCase):
         self.assertEqual(r.y, 0)
         self.assertEqual(r.id, 1)
 
-    def test_assigned_rect_id(self):
-        """ Testing assigned id. """
-        r = Rectangle(10, 2, 0, 3, 24)
-        self.assertEqual(r.width, 10)
-        self.assertEqual(r.height, 2)
-        self.assertEqual(r.x, 0)
-        self.assertEqual(r.y, 3)
+    def test_rectangle_2(self):
+        """ Tests the initialization with all attributes. """
+        r = Rectangle(12, 4, 3, 2, 24)
+        self.assertEqual(r.width, 12)
+        self.assertEqual(r.height, 4)
+        self.assertEqual(r.x, 3)
+        self.assertEqual(r.y, 2)
         self.assertEqual(r.id, 24)
 
-    def test_type_errors(self):
-        """ Testing type of width, height, x and y. """
-        r = Rectangle(10, 4)
-        with self.assertRaises(TypeError):
-            r.width = "10"
-            r.height = "Th"
-            r.width = [2, 3, 4]
-            r.height = (2, 4)
-            r.width = {}
-            r.height = {}
-            r.x = {}
-            r.x = "th"
-            r.x = [2, 3, 4]
-            r.y = {}
-            r.y = "3"
-            r.y = [5, 6, 7]
+    def test_new_rectangles(self):
+        """ Tests new rectangles. """
+        r1 = Rectangle(10, 2)
+        r2 = Rectangle(10, 2)
+        self.assertEqual(False, r1 is r2)
+        self.assertEqual(False, r1.id == r2.id)
 
-    def test_dimen_value(self):
-        """ Testing if width and height are > 0. """
-        r = Rectangle(24, 8)
+    def test_is_Base_instance(self):
+        """ Tests Ractangle is a Base instance. """
+        r = Rectangle(10, 2)
+        self.assertEqual(True, isinstance(r, Base))
+
+    def test_less_ammount_attr(self):
+        """ Test when no/less arg is passed. """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(10)
+            r2 = Rectangle()
+
+    def test_access_private_attr(self):
+        """ Trying to access the private attributes. """
+        r = Rectangle(10, 2)
+        with self.assertRaises(AttributeError):
+            r.__width
+            r.__height
+            r.__x
+            r.__y
+
+    def test_type_attr(self):
+        """ Tests if width, height, x, y type values are correct. """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle("2", 10, 3, 3, 3)
+            r2 = Rectangle(2, "10", 3, 3, 3)
+            r3 = Rectangle(2, 10, "3", 3, 3)
+            r4 = Rectangle(2, 10, 3, "3", 3)
+
+    def test_value_attr(self):
+        """ Tests if width and height values are > 0. """
         with self.assertRaises(ValueError):
-            r.width = -10
-            r.width = 0
-            r.height = -4
-            r.height = 0
+            r1 = Rectangle(-4, 2)
+            r2 = Rectangle(2, -4)
+
+    def test_value_attr_2(self):
+        """ Tests if x and y values are >= 0. """
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(10, 2, -3, 0, 3)
+            r2 = Rectangle(10, 2, 0, -3, 4)
+
+    def test_area(self):
+        """ Tests the area of the rectangle. """
+        r1 = Rectangle(3, 2)
+        r2 = Rectangle(2, 10)
+        r3 = Rectangle(8, 7, 0, 0, 12)
+        self.assertEqual(r1.area(), 6)
+        self.assertEqual(r2.area(), 20)
+        self.assertEqual(r3.area(), 56)
