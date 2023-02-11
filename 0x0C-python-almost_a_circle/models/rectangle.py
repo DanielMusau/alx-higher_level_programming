@@ -76,9 +76,16 @@ class Rectangle(Base):
 
     def display(self):
         """ Prints in stdout the rect with character #. """
+        res = " "
+        for lines in range(self.__y):
+            print()
+
         for i in range(self.__height):
-            for j in range(self.__width):
-                print("#", end='')
+            for j in range(self.__width + self.__x):
+                if j < self.__x:
+                    print(res, end='')
+                else:
+                    print("#", end='')
             print()
 
     def __str__(self):
