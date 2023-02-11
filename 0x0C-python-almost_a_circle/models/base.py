@@ -44,3 +44,14 @@ class Base:
 
         with open(filename, 'w', encoding='UTF-8') as f:
             return f.write(text)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ Returns the list of the JSON string
+        representation json_string. """
+        res = []
+
+        if not json_string:
+            return res
+        else:
+            return json.loads(json_string)
