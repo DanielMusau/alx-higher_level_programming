@@ -72,17 +72,17 @@ class Rectangle(Base):
 
     def area(self):
         """ Returns the area of the rectangle. """
-        return self.__width * self.__height
+        return self.width * self.height
 
     def display(self):
         """ Prints in stdout the rect with character #. """
         res = " "
-        for lines in range(self.__y):
+        for lines in range(self.y):
             print()
 
-        for i in range(self.__height):
-            for j in range(self.__width + self.__x):
-                if j < self.__x:
+        for i in range(self.height):
+            for j in range(self.width + self.x):
+                if j < self.x:
                     print(res, end='')
                 else:
                     print("#", end='')
@@ -90,7 +90,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """ Returns print of object. """
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
         """ Assigns an argument to each attribute. """
