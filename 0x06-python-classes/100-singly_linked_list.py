@@ -36,6 +36,7 @@ class Node:
         else:
             self.__next_node = value
 
+
 class SinglyLinkedList:
     """ Class that defines linked list. """
     def __str__(self):
