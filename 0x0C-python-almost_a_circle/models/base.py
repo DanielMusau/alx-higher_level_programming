@@ -55,3 +55,14 @@ class Base:
             return res
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ Class method that returns an instance with all
+        attributes already set. """
+        if cls.__name__ == "Rectangle":
+            dummy = cls(12, 12)
+        else:
+            dummy = cls(12)
+        dummy.update(**dictionary)
+        return dummy
