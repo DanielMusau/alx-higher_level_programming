@@ -163,7 +163,6 @@ class TestSquareMethods(unittest.TestCase):
             print(r1)
             self.assertEqual(str_out.getvalue(), res)
 
-
     def test_str_3(self):
         """ Test __str__ return value """
         s1 = Square(5)

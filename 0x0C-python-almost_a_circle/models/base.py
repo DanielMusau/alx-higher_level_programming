@@ -5,13 +5,14 @@ in the project.
 import json
 import csv
 
+
 class Base:
     """ Base class. """
     __nb_objects = 0
 
     def __init__(self, id=None):
         """ Initialization. """
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
@@ -22,7 +23,7 @@ class Base:
         """ Returns a JSON string representation of
         list_dictionaries. """
         res = "[]"
-        if list_dictionaries == None:
+        if list_dictionaries is None:
             return res
         else:
             return json.dumps(list_dictionaries)
@@ -33,8 +34,7 @@ class Base:
         list_objs to a file. """
         filename = f'{cls.__name__}.json'
         res = []
-        
-        if list_objs == None:
+        if list_objs is None:
             pass
         else:
             for i in range(len(list_objs)):
@@ -71,16 +71,15 @@ class Base:
     def load_from_file(cls):
         """ Class method that returns a list of instances. """
         filename = f'{cls.__name__}.json'
-        
-        if filename == None:
+        if filename is None:
             return []
-        
+
         with open(filename, 'r', encoding='UTF-8') as f:
             list_text = f.read()
-                
+
         cls_list = cls.from_json_string(list_text)
         inst_list = []
-        
+
         for index in range(len(cls_list)):
             inst_list.append(cls.create(**cls_list[index]))
 
@@ -117,7 +116,7 @@ class Base:
         """ Method that loads a CSV file """
         filename = f"{cls.__name__}.csv"
 
-        if filename == None:
+        if filename is None:
             return []
 
         with open(filename, 'r') as readFile:

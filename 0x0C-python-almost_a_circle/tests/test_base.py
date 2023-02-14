@@ -66,7 +66,6 @@ class BaseTest(unittest.TestCase):
             with patch('sys.stdout', new=StringIO()) as str_out:
                 print(file.read())
                 self.assertEqual(str_out.getvalue(), res)
-
         try:
             os.remove("Square.json")
         except:
