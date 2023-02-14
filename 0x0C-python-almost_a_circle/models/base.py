@@ -4,6 +4,7 @@ in the project.
 """
 import json
 import csv
+import os.path
 
 
 class Base:
@@ -71,7 +72,7 @@ class Base:
     def load_from_file(cls):
         """ Class method that returns a list of instances. """
         filename = f'{cls.__name__}.json'
-        if filename is None:
+        if os.path.exists(filename) is False:
             return []
 
         with open(filename, 'r', encoding='UTF-8') as f:
@@ -116,7 +117,7 @@ class Base:
         """ Method that loads a CSV file """
         filename = f"{cls.__name__}.csv"
 
-        if filename is None:
+        if os.path.exists(filename) is False:
             return []
 
         with open(filename, 'r') as readFile:
