@@ -21,7 +21,7 @@ if __name__ == '__main__':
     cur.execute(f"SELECT * FROM states \
                  WHERE CONVERT(`name` USING Latin1) \
                  COLLATE Latin1_General_CS = '{state_name}';"
-                 )
+                )
 
     rows = cur.fetchall()
 
