@@ -8,6 +8,7 @@ from sqlalchemy import Column, Integer, String, MetaData
 mymetadata = MetaData()
 Base = declarative_base(metadata=mymetadata)
 
+
 class State(Base):
     """class definition of state."""
     __tablename__ = 'states'
