@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Module that contains the class definition of a city."""
-from model_state import Base
+from relationship_state import Base
 from sqlalchemy import Column, Integer, String, ForeignKey
-
+from sqlalchemy.ext.declarative import declarative_base
 
 class City(Base):
     """Class definition of city."""
