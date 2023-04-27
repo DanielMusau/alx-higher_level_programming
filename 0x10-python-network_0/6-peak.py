@@ -29,7 +29,7 @@ def find_peak(list_of_integers):
 
         if list_of_integers[mid] >= list_of_integers[mid - 1] and \
                 list_of_integers[mid] >= list_of_integers[mid + 1]:
-                    return list_of_integers[mid]
+            return list_of_integers[mid]
 
         elif list_of_integers[mid - 1] > list_of_integers[mid]:
             right = mid - 1
