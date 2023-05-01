@@ -14,8 +14,6 @@ if __name__ == '__main__':
 
     json_data = response.json()
 
-    i = 10
-    while 0 <= i:
+    for i in range(10):
         print("{}: {}".format(json_data[i].get('sha'), json_data[i]
                               .get('commit').get('author').get('name')))
-        i -= 1
